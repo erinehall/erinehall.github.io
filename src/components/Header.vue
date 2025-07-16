@@ -18,16 +18,3 @@
     </div>
   </v-app-bar>
 </template>
-
-<style scoped>
-.nav-links .v-btn {
-  text-transform: none;
-  font-family: "Inter", Helvetica, Arial, sans-serif;
-  color: #1f1f1f;
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
-.nav-links .v-btn:hover {
-  color: #3b82f6;
-  opacity: 0.8;
-}
-</style>
