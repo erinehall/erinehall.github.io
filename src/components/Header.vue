@@ -11,10 +11,18 @@
     </v-toolbar-title>
     <v-spacer />
     <div class="nav-links">
-      <v-btn text rounded="lg" to="#about">About</v-btn>
-      <v-btn text rounded="lg" to="#resume">Resume</v-btn>
-      <v-btn text rounded="lg" to="#portfolio">Portfolio</v-btn>
-      <v-btn text rounded="lg" to="#contact">Contact</v-btn>
+      <v-btn text rounded="lg" @click="go('/')">About</v-btn>
+      <v-btn text rounded="lg" @click="go('/resume')">Resume</v-btn>
+      <v-btn text rounded="lg" @click="go('/portfolio')">Portfolio</v-btn>
+      <v-btn text rounded="lg" @click="go('/contact')">Contact</v-btn>
     </div>
   </v-app-bar>
 </template>
+
+<script setup>
+import { navigate } from "../router";
+
+function go(path) {
+  navigate(path);
+}
+</script>
