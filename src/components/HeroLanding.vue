@@ -1,23 +1,23 @@
 <template>
   <section class="hero-wrapper">
     <div class="hero-content">
-      <div class="text-block">
+      <div class="text-block fade-in">
         <h1>Erin Hall</h1>
         <p class="subheading">Intermediate Software Systems Engineer</p>
-        <div class="skills">
-          <v-chip class="skill-chip" rounded="full">
+        <div class="skills fade-in">
+          <v-chip class="skill-chip" rounded="lg" variant="elevated">
             Web Development
           </v-chip>
-          <v-chip class="skill-chip" rounded="full">
+          <v-chip class="skill-chip" rounded="lg" variant="elevated">
             UI/UX Design
           </v-chip>
-          <v-chip class="skill-chip" rounded="full">
+          <v-chip class="skill-chip" rounded="lg" variant="elevated">
             Usability Engineering
           </v-chip>
-          <v-chip class="skill-chip" rounded="full">
+          <v-chip class="skill-chip" rounded="lg" variant="elevated">
             Human-Computer Interaction
           </v-chip>
-          <v-chip class="skill-chip" rounded="full">
+          <v-chip class="skill-chip" rounded="lg" variant="elevated">
             High-Performance Computing
           </v-chip>
         </div>
@@ -41,7 +41,7 @@
           </a>
         </div>
       </div>
-      <div class="image-block">
+      <div class="image-block fade-in">
         <v-img
           src="/profile-pic.jpg"
           class="portrait"
