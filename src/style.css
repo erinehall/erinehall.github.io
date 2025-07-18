@@ -1,6 +1,6 @@
 :root {
   --accent-color: #5c4533;
-  --accent-translucent: rgba(92, 69, 51, 0.2);
+  --accent-translucent: rgba(92, 69, 51, 0.25);
   font-family: "Inter", Helvetica, Arial, sans-serif;
 }
 
@@ -29,6 +29,7 @@ body {
   color: #1f1f1f;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
+
 .nav-links .v-btn:hover,
 .nav-links .v-btn:active {
   color: var(--accent-color);
@@ -98,14 +99,22 @@ body {
   cursor: default;
 }
 
-.icon-links a {
-  margin-right: 12px;
-  color: inherit;
-  transition: color 0.2s ease, opacity 0.2s ease;
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
 }
-.icon-links a:hover {
-  color: var(--accent-color);
-  opacity: 0.8;
+
+.social-icons a {
+  color: #5c4533;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #8a6f55;
 }
 
 .image-block {
@@ -127,9 +136,11 @@ body {
     gap: 32px;
     padding: 0 1rem;
   }
+
   .image-block {
     align-items: center;
   }
+
   .portrait {
     width: 100%;
   }
@@ -140,6 +151,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: none;
