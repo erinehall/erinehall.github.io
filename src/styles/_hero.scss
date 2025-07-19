@@ -1,0 +1,104 @@
+@use "./variables";
+@use "sass:color";
+
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  background: url("/wallpaper.png") no-repeat center center;
+  background-size: cover;
+}
+
+.hero-content {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0 3rem;
+  gap: 48px;
+  height: 80vh;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 1rem;
+  }
+}
+
+.text-block {
+  padding-top: 30px;
+  flex: 1;
+  max-width: 500px;
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .subheading {
+    font-size: 1.5em;
+    margin-bottom: 24px;
+  }
+}
+
+.skills {
+  margin: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  margin: 4px;
+  padding: 6px 14px;
+  background-color: variables.$accent-translucent;
+  color: variables.$accent-color;
+  border: 1px solid variables.$accent-color;
+  border-radius: 999px;
+  font-size: 0.95em;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background-color: variables.$accent-color;
+    color: #fff;
+    cursor: default;
+  }
+}
+
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1rem;
+
+  a {
+    color: variables.$accent-color;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: color.adjust(variables.$accent-color, $lightness: 10%);
+    }
+  }
+}
+
+.image-block {
+  flex-shrink: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.portrait {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 960px) {
+    width: 100%;
+  }
+}

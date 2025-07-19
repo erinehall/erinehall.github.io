@@ -1,0 +1,9 @@
+$accent-color: #5c4533;
+$accent-translucent: rgba(92, 69, 51, 0.25);
+$font-family: "Inter", Helvetica, Arial, sans-serif;
+
+:root {
+  --accent-color: #{$accent-color};
+  --accent-translucent: #{$accent-translucent};
+  font-family: $font-family;
+}

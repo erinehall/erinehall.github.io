@@ -1,0 +1,84 @@
+@use "./variables";
+
+.resume-page {
+  background: linear-gradient(to bottom, #faf7f2, #f3eada);
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    color: variables.$accent-color;
+  }
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin-bottom: 0.5rem;
+    color: variables.$accent-color;
+  }
+}
+
+.resume-item {
+  margin-bottom: 1.5rem;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+  }
+
+  ul {
+    margin: 0.5rem 0 0 1.2rem;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.6rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+.date-location {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+}
+
+.resume-skill-category {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+
+  strong {
+    margin-right: 0.5rem;
+  }
+}
+
+.resume-publication-link,
+.resume-link {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: variables.$accent-color;
+  text-decoration: none;
+  border-bottom: 1px solid variables.$accent-color;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.skill-card {
+  background-color: variables.$accent-translucent;
+}

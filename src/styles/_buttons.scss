@@ -1,0 +1,16 @@
+@use "./variables";
+
+.nav-links {
+  .v-btn {
+    text-transform: none;
+    color: #1f1f1f;
+    transition: color 0.2s ease, opacity 0.2s ease;
+
+    &:hover,
+    &:active {
+      color: variables.$accent-color;
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  }
+}
