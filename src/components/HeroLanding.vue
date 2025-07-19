@@ -46,7 +46,7 @@
       </div>
       <div class="image-block fade-in">
         <v-img
-          src="/assets/profile-pic.jpg"
+          src="src/assets/profile-pic.jpg"
           class="portrait"
           alt="Erin Hall portrait"
           cover
