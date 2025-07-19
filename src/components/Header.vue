@@ -4,7 +4,7 @@
       style="flex: none; overflow: visible; max-width: none; padding-right: 8px"
     >
       <img
-        src="/signature.png"
+        src="/src/assets/signature.png"
         alt="Erin Hall signature"
         style="height: 48px; object-fit: contain"
       />
