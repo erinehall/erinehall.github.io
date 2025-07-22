@@ -4,7 +4,7 @@
       style="flex: none; overflow: visible; max-width: none; padding-right: 8px"
     >
       <img
-        src="/src/assets/signature.png"
+        :src="signature"
         alt="Erin Hall signature"
         style="height: 48px; object-fit: contain"
       />
@@ -21,6 +21,7 @@
 
 <script setup>
 import { navigate } from "../router";
+import signature from "../assets/signature.png";
 
 function go(path) {
   navigate(path);
