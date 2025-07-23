@@ -1,5 +1,5 @@
 <template>
-  <section class="page-container resume-page">
+  <v-container class="resume-page py-8" max-width="960">
     <h1 class="resume-title">Resume</h1>
 
     <ResumeSection title="Summary">
@@ -78,7 +78,7 @@
         </a>
       </ResumeCard>
     </ResumeSection>
-  </section>
+  </v-container>
 </template>
 
 <script setup>
