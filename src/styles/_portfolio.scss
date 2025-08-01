@@ -1,0 +1,13 @@
+@use "./variables";
+
+.portfolio-page {
+  h1 {
+    color: variables.$accent-color;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.portfolio-card {
+  height: 100%;
+}
