@@ -1,0 +1,22 @@
+@use "./variables";
+
+.contact-page {
+  h1 {
+    color: variables.$accent-color;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #555;
+    margin-bottom: 2rem;
+  }
+}
+.confirmation-message {
+  color: #6e4c35;
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 1rem;
+  transition: opacity 0.3s ease;
+}
