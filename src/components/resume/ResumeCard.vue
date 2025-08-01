@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="2" rounded class="pa-4 mb-4 scroll-fade">
+  <div class="resume-card mb-4 scroll-fade">
     <ResumeHeader v-if="header" v-bind="header" />
     <h4 v-if="heading" class="d-flex align-center mb-2">
       <template v-if="icon">
@@ -15,16 +15,16 @@
       <v-chip
         v-for="skill in skills"
         :key="skill"
-        pill
-        small
-        outlined
-        color="brown-darken-2"
+        rounded="pill"
+        size="small"
+        variant="tonal"
+        color="secondary"
         class="ma-1"
       >
         {{ skill }}
       </v-chip>
     </div>
-  </v-card>
+  </div>
 </template>
 
 <script setup lang="ts">

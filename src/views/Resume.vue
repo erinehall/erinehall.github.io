@@ -1,6 +1,18 @@
 <template>
-  <v-container class="resume-page py-8" max-width="960">
-    <h1 class="resume-title">Resume</h1>
+  <v-container class="resume-page py-8" max-width="900">
+    <div class="d-flex align-start justify-space-between mb-6">
+      <h1 class="resume-title">Resume</h1>
+      <v-btn
+        href="/resume.pdf"
+        variant="outlined"
+        size="small"
+        prepend-icon="mdi-download"
+        class="download-btn"
+        target="_blank"
+      >
+        Download
+      </v-btn>
+    </div>
 
     <ResumeSection title="Summary">
       <p>

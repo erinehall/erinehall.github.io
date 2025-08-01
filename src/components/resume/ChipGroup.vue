@@ -4,10 +4,10 @@
     <v-chip
       v-for="skill in skills"
       :key="skill"
-      pill
-      small
-      outlined
-      color="brown-darken-2"
+      rounded="pill"
+      size="small"
+      variant="tonal"
+      color="secondary"
       class="ma-1"
     >
       {{ skill }}
