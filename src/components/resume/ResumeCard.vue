@@ -15,7 +15,7 @@
       <v-chip
         v-for="skill in skills"
         :key="skill"
-        rounded="pill"
+        rounded="lg"
         size="small"
         variant="tonal"
         color="secondary"

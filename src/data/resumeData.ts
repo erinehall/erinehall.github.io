@@ -111,44 +111,31 @@ export const education = [
 ];
 
 export const skills = [
-  {
-    category: "Frontend",
-    items: [
-      "React",
-      "JavaScript",
-      "TypeScript",
-      "AngularJS",
-      "HTML",
-      "CSS",
-      "Vue",
-    ],
-  },
-  {
-    category: "Backend",
-    items: ["Python", "Django", "REST APIs", "MySQL", "Java", "C"],
-  },
-  {
-    category: "Development Tools",
-    items: [
-      "Docker",
-      "GitLab CI/CD",
-      "Git",
-      "Vite",
-      "Jest",
-      "React Testing Library",
-    ],
-  },
-  {
-    category: "Other",
-    items: [
-      "High-Performance Computing",
-      "Survey Analysis",
-      "Usability Testing",
-      "User Research",
-      "AI Usability",
-      "Figma",
-    ],
-  },
+  "React",
+  "JavaScript",
+  "TypeScript",
+  "AngularJS",
+  "HTML",
+  "CSS",
+  "Vue",
+  "Python",
+  "Django",
+  "REST APIs",
+  "MySQL",
+  "Java",
+  "C",
+  "Docker",
+  "GitLab CI/CD",
+  "Git",
+  "Vite",
+  "Jest",
+  "React Testing Library",
+  "High-Performance Computing",
+  "Survey Analysis",
+  "Usability Testing",
+  "User Research",
+  "AI Usability",
+  "Figma",
 ];
 
 export const publications = [

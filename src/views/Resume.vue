@@ -63,12 +63,18 @@
     </ResumeSection>
 
     <ResumeSection title="Skills">
-      <ChipGroup
-        v-for="(group, s) in skills"
-        :key="s"
-        :category="group.category"
-        :skills="group.items"
-      />
+      <div class="d-flex flex-wrap ga-2 mb-2" style="row-gap: 1rem">
+        <v-chip
+          v-for="skill in skills"
+          :key="skill"
+          rounded="lg"
+          size="small"
+          variant="tonal"
+          color="secondary"
+        >
+          {{ skill }}
+        </v-chip>
+      </div>
     </ResumeSection>
 
     <ResumeSection title="Publications">
@@ -104,7 +110,6 @@ import {
 import ResumeSection from "../components/resume/ResumeSection.vue";
 import ResumeCard from "../components/resume/ResumeCard.vue";
 import ResumeHeader from "../components/resume/ResumeHeader.vue";
-import ChipGroup from "../components/resume/ChipGroup.vue";
 
 onMounted(() => {
   const observer = new IntersectionObserver(
