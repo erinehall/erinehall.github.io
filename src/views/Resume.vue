@@ -83,7 +83,6 @@
         :key="p"
         :header="{
           title: pub.title,
-          icon: 'mdi-book-open-page-variant',
           date: pub.date,
         }"
       >
