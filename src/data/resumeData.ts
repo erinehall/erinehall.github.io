@@ -167,6 +167,13 @@ export const certifications = [
 
 export const clearances = ["DoD Secret", "IRS Moderate (MBI)"];
 
+export const memberships = [
+  {
+    name: "Society of Women Engineers (SWE)",
+    date: "Spring 2023 – Present",
+  },
+];
+
 export default {
   experience,
   education,
@@ -174,4 +181,5 @@ export default {
   publications,
   certifications,
   clearances,
+  memberships,
 };
