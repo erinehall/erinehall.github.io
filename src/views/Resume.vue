@@ -87,6 +87,53 @@
         </a>
       </ResumeCard>
     </ResumeSection>
+    <ResumeSection title="Certifications">
+      <ResumeCard
+        v-for="(cert, c) in certifications"
+        :key="c"
+        :header="{
+          title: cert.name,
+          date: cert.date,
+          subtitle: cert.organization,
+        }"
+        icon="mdi-certificate-outline"
+      />
+    </ResumeSection>
+
+    <ResumeSection title="SecurityClearances">
+      <ResumeCard icon="mdi-shield-check-outline">
+        <ul>
+          <li v-for="(clearance, i) in clearances" :key="i">{{ clearance }}</li>
+        </ul>
+      </ResumeCard>
+    </ResumeSection>
+
+    <ResumeSection title="Professional Memberships">
+      <ResumeCard
+        v-for="(member, m) in memberships"
+        :key="m"
+        :header="{
+          title: member.name,
+          date: member.date,
+        }"
+        icon="mdi-account-group-outline"
+      />
+    </ResumeSection>
+
+    <ResumeSection title="Conference Presentations">
+      <ResumeCard
+        v-for="(pres, p) in presentations"
+        :key="p"
+        :header="{
+          title: pres.conference,
+          date: pres.date,
+          subtitle: pres.location,
+        }"
+        icon="mdi-presentation-play"
+      >
+        <p>{{ pres.role }}</p>
+      </ResumeCard>
+    </ResumeSection>
   </v-container>
 </template>
 
@@ -97,6 +144,10 @@ import {
   education,
   skills,
   publications,
+  certifications,
+  clearances,
+  memberships,
+  presentations,
 } from "../data/resumeData";
 import ResumeSection from "../components/resume/ResumeSection.vue";
 import ResumeCard from "../components/resume/ResumeCard.vue";
