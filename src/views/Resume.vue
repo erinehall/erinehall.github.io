@@ -13,14 +13,6 @@
         Download
       </v-btn>
     </div>
-
-    <ResumeSection title="Summary">
-      <p>
-        Full-stack software engineer focused on building user-centered,
-        sustainable web applications.
-      </p>
-    </ResumeSection>
-
     <ResumeSection title="Experience">
       <div v-for="(job, j) in experience" :key="j" class="resume-item">
         <ResumeHeader
