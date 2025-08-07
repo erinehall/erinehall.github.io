@@ -4,6 +4,20 @@ import hcii from "../assets/hcii-2024.png";
 
 export default [
   {
+    title:
+      "Exploring Explainability and Transparency in Automated Essay Scoring Systems",
+    subtitle: "HCII 2024 Conference Paper",
+    description:
+      "Presents findings from a user-centered evaluation of an AI grading platform, identifying key design considerations to enhance trust, clarity, and usability in feedback systems.",
+    image: hcii,
+    links: [
+      {
+        label: "View DOI",
+        url: "https://doi.org/10.1007/978-3-031-61691-4_18",
+      },
+    ],
+  },
+  {
     title: "Master's Thesis",
     subtitle:
       "A User-Centered Design Approach to Evaluating the Usability of Automated Essay Scoring Systems",
@@ -27,20 +41,6 @@ export default [
       {
         label: "View DOI",
         url: "https://doi.org/10.1007/978-3-031-36336-8_104",
-      },
-    ],
-  },
-  {
-    title:
-      "Exploring Explainability and Transparency in Automated Essay Scoring Systems",
-    subtitle: "HCII 2024 Conference Paper",
-    description:
-      "Presents findings from a user-centered evaluation of an AI grading platform, identifying key design considerations to enhance trust, clarity, and usability in feedback systems.",
-    image: hcii,
-    links: [
-      {
-        label: "View DOI",
-        url: "https://doi.org/10.1007/978-3-031-61691-4_18",
       },
     ],
   },
