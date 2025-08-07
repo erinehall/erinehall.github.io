@@ -174,6 +174,21 @@ export const memberships = [
   },
 ];
 
+export const presentations = [
+  {
+    conference: "International Conference on Human-Computer Interaction (HCII)",
+    role: "Paper Presenter",
+    location: "Washington, D.C.",
+    date: "July 2024",
+  },
+  {
+    conference: "AIED 2023",
+    role: "Poster Presenter",
+    location: "Virtual",
+    date: "June 2023",
+  },
+];
+
 export default {
   experience,
   education,
@@ -182,4 +197,5 @@ export default {
   certifications,
   clearances,
   memberships,
+  presentations,
 };
