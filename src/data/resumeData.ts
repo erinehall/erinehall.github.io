@@ -152,4 +152,17 @@ export const publications = [
   },
 ];
 
-export default { experience, education, skills, publications };
+export const certifications = [
+  {
+    name: "Professional ScrumMaster I (PSM I)",
+    organization: "Scrum.org",
+    date: "August 2025",
+  },
+  {
+    name: "Data Parallelism: How to Train Deep Learning Models on Multiple GPUs",
+    organization: "NVIDIA",
+    date: "July 2025",
+  },
+];
+
+export default { experience, education, skills, publications, certifications };
