@@ -165,4 +165,13 @@ export const certifications = [
   },
 ];
 
-export default { experience, education, skills, publications, certifications };
+export const clearances = ["DoD Secret", "IRS Moderate (MBI)"];
+
+export default {
+  experience,
+  education,
+  skills,
+  publications,
+  certifications,
+  clearances,
+};
