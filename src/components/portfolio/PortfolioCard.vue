@@ -1,6 +1,6 @@
 <template>
   <v-card class="portfolio-card" elevation="2" rounded>
-    <v-img v-if="image" :src="image" height="200" cover class="mb-2" />
+    <v-img v-if="image" :src="image" width="100%" cover class="mb-2" />
     <v-card-title>{{ title }}</v-card-title>
     <v-card-subtitle v-if="subtitle">{{ subtitle }}</v-card-subtitle>
     <v-card-text>
