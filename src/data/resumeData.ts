@@ -13,7 +13,7 @@ export const experience = [
           "Coordinating HPC engagement for 900+ users by conducting surveys, organizing monthly informational sessions and advanced trainings, and developing an HPC learning path to strengthen organizational expertise",
           "Delivered reports and briefings to advise a sponsor on HPC cluster setup and operational best practices",
         ],
-        skills: ["React", "TypeScript", "Docker", "Django"],
+        skills: ["React", "TypeScript", "Vite", "Docker", "Python", "Django"],
       },
       {
         heading: "ATT&CK",
@@ -28,7 +28,7 @@ export const experience = [
         bullets: [
           "Department intern coordinator, overseeing hiring, onboarding, mentorship, and performance evaluations",
         ],
-        skills: ["Mentorship"],
+        skills: ["Leadership", "Mentorship"],
       },
     ],
   },
@@ -45,14 +45,14 @@ export const experience = [
           "Delivered full-stack upgrades to a HPC cluster analytics dashboard, improving sustainability, performance, and user experience",
           "Built and maintained full-stack web applications for internal tools and external-facing platforms",
         ],
-        skills: ["React", "Django"],
+        skills: ["React", "Javascript", "Typescript", "Python", "Django"],
       },
       {
         heading: "ATT&CK",
         bullets: [
           "Developed and maintained tools, websites, and libraries across the ATT&CK ecosystem to advance threat-informed defense and understanding of adversary tactics and techniques",
         ],
-        skills: ["Python", "Vue"],
+        skills: ["HTML", "Python", "AngularJS"],
       },
     ],
   },
