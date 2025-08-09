@@ -136,6 +136,8 @@ export const skills = [
   "User Research",
   "AI Usability",
   "Figma",
+  "Leadership",
+  "Mentorship",
 ];
 
 export const publications = [
