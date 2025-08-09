@@ -172,7 +172,7 @@ export const clearances = ["DoD Secret", "IRS Moderate (MBI)"];
 export const memberships = [
   {
     name: "Society of Women Engineers (SWE)",
-    date: "Spring 2023 – Present",
+    date: "Spring 2023 – June 2025",
   },
 ];
 
