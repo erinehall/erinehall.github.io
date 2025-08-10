@@ -1,20 +1,12 @@
 <template>
   <v-card class="portfolio-card" elevation="2" rounded>
-    <v-img v-if="image" :src="image" width="100%" cover class="mb-2" />
-    <v-card-title>{{ title }}</v-card-title>
+    <v-img v-if="image" :src="image" height="160" cover class="mb-2" contain /> <v-card-title>{{ title }}</v-card-title>
     <v-card-subtitle v-if="subtitle">{{ subtitle }}</v-card-subtitle>
     <v-card-text>
       <p>{{ description }}</p>
       <div v-if="links?.length" class="d-flex flex-wrap ga-2 mt-2">
-        <v-btn
-          v-for="(link, i) in links"
-          :key="i"
-          :href="link.url"
-          target="_blank"
-          color="primary"
-          variant="outlined"
-          size="small"
-        >
+        <v-btn v-for="(link, i) in links" :key="i" :href="link.url" target="_blank" color="primary" variant="outlined"
+          size="small">
           {{ link.label }}
         </v-btn>
       </div>
