@@ -94,10 +94,11 @@
         :header="{
           title: cert.name,
           date: cert.date,
-          subtitle: cert.organization,
         }"
         icon="mdi-certificate-outline"
-      />
+      >
+        <p>{{ cert.organization }}</p>
+      </ResumeCard>
     </ResumeSection>
 
     <ResumeSection title="SecurityClearances">
