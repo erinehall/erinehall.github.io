@@ -21,7 +21,6 @@ export default createVuetify({
           secondary: "#A67C52",
           background: "#FFFFFF",
           surface: "#FFFFFF",
-          error: "#B00020",
           onPrimary: "#FFFFFF",
           onSecondary: "#FFFFFF",
           onBackground: "#1F1F1F",
