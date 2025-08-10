@@ -105,7 +105,10 @@ export const education = [
     degree: "B.S. in Computer Science",
     date: "August 2018 – May 2021",
     details: [
-      "Magna cum laude (3.61 GPA), Dean’s List every semester, minors in Science, Technology & Law and Math",
+      "3.61 GPA",
+      "Magna cum laude",
+      "Dean’s List every semester",
+      "Minors in Science, Technology & Law and Math",
     ],
   },
 ];
