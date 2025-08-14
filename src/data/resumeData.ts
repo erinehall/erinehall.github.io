@@ -143,6 +143,14 @@ export const skills = [
   "Mentorship",
 ];
 
+export const aboutPageSkills = [
+  "Web Development",
+  "UI/UX Design",
+  "Usability Engineering",
+  "Human-Computer Interaction",
+  "High-Performance Computing",
+];
+
 export const publications = [
   {
     title:
@@ -198,6 +206,7 @@ export default {
   experience,
   education,
   skills,
+  aboutPageSkills,
   publications,
   certifications,
   clearances,
