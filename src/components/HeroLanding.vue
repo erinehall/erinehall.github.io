@@ -5,20 +5,14 @@
         <h1>Erin Hall</h1>
         <p class="subheading">Intermediate Software Systems Engineer</p>
         <div class="d-flex flex-wrap ga-2 my-4 fade-in">
-          <v-chip rounded="lg" variant="tonal" color="secondary">
-            Web Development
-          </v-chip>
-          <v-chip rounded="lg" variant="tonal" color="secondary">
-            UI/UX Design
-          </v-chip>
-          <v-chip rounded="lg" variant="tonal" color="secondary">
-            Usability Engineering
-          </v-chip>
-          <v-chip rounded="lg" variant="tonal" color="secondary">
-            Human-Computer Interaction
-          </v-chip>
-          <v-chip rounded="lg" variant="tonal" color="secondary">
-            High-Performance Computing
+          <v-chip
+            v-for="skill in aboutPageSkills.slice(0, 5)"
+            :key="skill"
+            rounded="lg"
+            variant="tonal"
+            color="secondary"
+          >
+            {{ skill }}
           </v-chip>
         </div>
         <div class="d-flex align-center ga-6 mt-8 pl-4">
@@ -55,4 +49,5 @@
 
 <script setup>
 import profilePic from "../assets/profile-pic.jpg";
+import { aboutPageSkills } from "../data/resumeData";
 </script>
