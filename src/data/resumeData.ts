@@ -68,10 +68,10 @@ export const experience = [
         bullets: [
           "Maintained and designed interactive UI features in React and Python for a web-based dashboard to monitor HPC cluster performance and usage statistics",
         ],
-        skills: ["React", "Python"],
+        skills: ["React", "Javascript", "HTML","CSS","Python"],
       },
       {
-        heading: "ATT&CK",
+        heading: "IRS Labs",
         bullets: [
           "Provided updates and maintenance in AngularJS for a company-hosted platform for concept demonstration and prototyping early web applications",
         ],
