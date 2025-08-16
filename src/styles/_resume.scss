@@ -14,6 +14,67 @@
   }
 }
 
+.title-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left spacer | title | right area */
+  align-items: center;
+}
+.title-row .resume-title {
+  grid-column: 2; /* center column */
+  justify-self: center;
+  margin: 0;
+  text-align: center;
+}
+.title-row .v-btn {
+  grid-column: 3; /* right column */
+  justify-self: end; /* stick to the right */
+}
+
+.hover-shadow {
+  transition: box-shadow 0.25s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.border-l-primary {
+  border-left: 4px solid rgb(var(--v-theme-primary));
+}
+
+.border-l-secondary {
+  border-left: 4px solid rgb(var(--v-theme-secondary));
+}
+
+.role-card {
+  border: 1px solid rgba(111, 78, 55, 0.18);
+  border-left: 4px solid rgb(var(--v-theme-secondary));
+  border-radius: 14px;
+  background: rgb(var(--v-theme-surface));
+}
+
+.card-pad .v-card-title {
+  padding: 16px 24px;
+}
+
+.card-pad .v-card-text {
+  padding: 16px 24px;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.space-y-8 > * + * {
+  margin-top: 2rem;
+}
+
+.wrap {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .resume-section {
   margin: 2.5rem 0;
   padding: 1rem 0;
@@ -122,4 +183,32 @@
 
 .skill-card {
   background-color: variables.$accent-translucent;
+}
+.border-l-primary {
+  border-left: 4px solid rgb(var(--v-theme-primary));
+}
+.border-l-secondary {
+  border-left: 4px solid rgb(var(--v-theme-secondary));
+}
+.hover-shadow {
+  transition: box-shadow 0.25s ease;
+}
+.hover-shadow:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+.max-w-4xl {
+  max-width: 896px;
+  margin-inline: auto;
+}
+.py-16 {
+  padding-block: 4rem;
+}
+.px-6 {
+  padding-inline: 1.5rem;
+}
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+.space-y-8 > * + * {
+  margin-top: 2rem;
 }
