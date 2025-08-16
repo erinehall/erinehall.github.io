@@ -156,11 +156,13 @@ export const publications = [
     title:
       "Exploring Explainability and Transparency in Automated Essay Scoring Systems: A User-Centered Evaluation",
     date: "June 2024",
+    doi: "10.1007/978-3-031-61691-4_18",
     link: "https://doi.org/10.1007/978-3-031-61691-4_18",
   },
   {
     title: "Identifying Usability Challenges in AI-Based Essay Grading Tools",
     date: "June 2023",
+    doi: "10.1007/978-3-031-36336-8_104",
     link: "https://doi.org/10.1007/978-3-031-36336-8_104",
   },
 ];
