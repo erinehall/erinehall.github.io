@@ -89,21 +89,21 @@
 
     <!-- Certifications -->
     <ResumeSection title="Certifications">
-      <v-row>
-        <v-col v-for="(cert, c) in certifications" :key="c" cols="12" md="6">
-          <v-card class="hover-shadow border-l-primary card-pad" elevation="2">
-            <v-card-title>
+      <v-row class="align-stretch">
+        <v-col v-for="(cert, c) in certifications" :key="c" cols="12" md="6" class="d-flex">
+          <v-card class="hover-shadow border-l-primary card-pad d-flex flex-column h-100" elevation="2">
+            <v-card-title class="flex-grow-1">
               <div class="d-flex align-start ga-4">
                 <v-avatar color="primary-lighten-4" size="48">
                   <v-icon color="primary">mdi-trophy</v-icon>
                 </v-avatar>
                 <div class="flex-grow-1">
-                  <h3 class="text-h6 text-primary mb-1 wrap">{{ cert.name }}</h3>
+                  <h3 class="text-h6 text-primary mb-1 wrap" style="line-height:1.4">{{ cert.name }}</h3>
                   <p class="text-medium-emphasis wrap">{{ cert.organization }}</p>
                 </div>
               </div>
             </v-card-title>
-            <v-card-text class="d-flex justify-space-between align-center">
+            <v-card-text class="d-flex justify-space-between align-center mt-auto">
               <span class="text-caption">Completed:</span>
               <v-chip color="secondary" class="text-white" size="small">{{ cert.date }}</v-chip>
             </v-card-text>
