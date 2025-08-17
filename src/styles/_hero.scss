@@ -3,9 +3,16 @@
 .hero-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   background: url("../assets/wallpaper.png") no-repeat center center;
   background-size: cover;
   padding: 0;
+  position: relative;
+  height: calc(100vh - var(--v-layout-top, 0px));
+}
+
+.hero-content {
+  gap: 40px;
 }
 
 .text-block {
@@ -18,6 +25,18 @@
     line-height: 1.1;
     margin-bottom: 8px;
     font-weight: 600;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      margin-top: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #4b2e2e, #d2b48c);
+      box-shadow: 0 0 6px rgba(79, 45, 25, 0.4);
+    }
   }
 
   .subheading {
@@ -52,4 +71,44 @@
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+  display: block;
+  width: 4px;
+  height: 24px;
+  margin: 0 auto;
+  background: rgb(var(--v-theme-primary));
+  position: relative;
+  opacity: 0.5;
+}
+
+.scroll-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid rgb(var(--v-theme-primary));
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -10px);
+  }
+  60% {
+    transform: translate(-50%, -5px);
+  }
 }

@@ -1,6 +1,6 @@
 <template>
   <v-container class="hero-wrapper" fluid>
-    <v-row class="hero-content align-center" justify="center">
+  <v-row class="hero-content align-center ga-8" justify="center">
       <v-col cols="12" md="6" class="text-block fade-in">
         <h1>Erin Hall</h1>
         <p class="subheading">Intermediate Software Systems Engineer</p>
@@ -44,6 +44,9 @@
         />
       </v-col>
     </v-row>
+    <div class="scroll-indicator">
+      <span class="scroll-arrow" aria-hidden="true"></span>
+    </div>
   </v-container>
 </template>
 
