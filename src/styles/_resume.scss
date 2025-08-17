@@ -30,6 +30,21 @@
   justify-self: end; /* stick to the right */
 }
 
+@media (max-width: 600px) {
+  .title-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 1rem;
+  }
+  .title-row .resume-title {
+    grid-column: 1;
+  }
+  .title-row .v-btn {
+    grid-column: 1;
+    justify-self: center;
+  }
+}
+
 .hover-shadow {
   transition: box-shadow 0.25s ease;
 }
