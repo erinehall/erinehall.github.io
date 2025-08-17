@@ -70,24 +70,18 @@
         <v-card-text>
           <ResumeHeader :title="ed.degree" :subtitle="ed.school" icon="mdi-school" :date="ed.date" :dateChip="true" />
 
-          <div v-if="ed.details?.length" class="mb-2">
+          <div v-if="ed.details?.length || ed.thesis" class="mb-2">
             <ul class="pl-6">
               <li v-for="(detail, d) in ed.details" :key="d">{{ detail }}</li>
+              <li v-if="ed.thesis">Thesis: {{ ed.thesis.title }}</li>
             </ul>
           </div>
 
-          <div v-if="ed.thesis">
-            <h4 class="mb-2 text-primary">Thesis:</h4>
-            <v-card variant="outlined" class="pa-4">
-              <div class="d-flex flex-column flex-sm-row align-sm-center justify-space-between ga-3">
-                <p class="text-caption font-italic wrap">{{ ed.thesis.title }}</p>
-                <v-btn variant="outlined" color="primary" size="small" :href="ed.thesis.url" target="_blank"
-                  class="flex-shrink-0">
-                  <v-icon start>mdi-open-in-new</v-icon>
-                  View Thesis
-                </v-btn>
-              </div>
-            </v-card>
+          <div v-if="ed.thesis" class="mt-2">
+            <v-btn variant="outlined" color="primary" size="small" :href="ed.thesis.url" target="_blank">
+              <v-icon start>mdi-open-in-new</v-icon>
+              View Thesis
+            </v-btn>
           </div>
         </v-card-text>
       </v-card>
