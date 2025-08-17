@@ -99,6 +99,7 @@ export const education = [
         "A User-Centered Design Approach to Evaluating the Usability of Automated Essay Scoring Systems",
       url: "https://vtechworks.lib.vt.edu/server/api/core/bitstreams/12ad03cd-5041-446e-aee9-097ad1d6c617/content",
     },
+    details: ["3.87 GPA"],
   },
   {
     school: "Virginia Tech",
