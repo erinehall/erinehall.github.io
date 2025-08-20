@@ -1,6 +1,11 @@
 $accent-color: #5c4533;
 $accent-translucent: rgba(92, 69, 51, 0.25);
 $font-family: "Inter", Helvetica, Arial, sans-serif;
+$card-border-color: rgba(var(--v-theme-primary), 0.18);
+$card-radius: 14px;
+$card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+$hover-card-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+$card-padding: 16px 24px;
 
 :root {
   --accent-color: #{$accent-color};

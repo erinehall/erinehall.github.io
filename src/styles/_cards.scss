@@ -1,0 +1,24 @@
+@use "./variables";
+
+.app-card {
+  border: 1px solid variables.$card-border-color;
+  border-radius: variables.$card-radius;
+  background: rgb(var(--v-theme-surface));
+  box-shadow: variables.$card-shadow;
+}
+
+.card-pad {
+  .v-card-title,
+  .v-card-text,
+  .v-card-subtitle {
+    padding: variables.$card-padding;
+  }
+}
+
+.hover-shadow {
+  transition: box-shadow 0.25s ease;
+
+  &:hover {
+    box-shadow: variables.$hover-card-shadow !important;
+  }
+}

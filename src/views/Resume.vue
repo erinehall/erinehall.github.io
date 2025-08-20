@@ -1,5 +1,5 @@
 <template>
-  <v-container class="resume-page py-16" max-width="700">
+  <v-container class="resume-page" max-width="700">
     <div class="title-row mb-6">
       <h1 class="resume-title">Resume</h1>
       <v-btn href="/resume.pdf" variant="outlined" size="small" prepend-icon="mdi-download" target="_blank">
@@ -31,7 +31,8 @@
           </v-chip>
         </div>
 
-        <v-card v-for="(role, i) in job.roles" :key="i" class="hover-shadow role-card card-pad mb-4" elevation="0">
+        <v-card v-for="(role, i) in job.roles" :key="i" class="app-card hover-shadow card-pad mb-4 role-card"
+          elevation="0">
           <v-card-title class="pb-2 d-flex align-center ga-3 role-header">
             <div v-if="role.icon" class="role-badge">
               <v-icon :icon="role.icon" size="16" />
@@ -54,7 +55,7 @@
 
     <!-- Skills -->
     <ResumeSection title="Skills">
-      <v-card class="hover-shadow card-pad">
+      <v-card class="app-card hover-shadow card-pad" elevation="0">
         <v-card-text class="pt-8">
           <ChipList :items="skills" containerClass="d-flex flex-wrap justify-center ga-2"
             containerStyle="row-gap:1rem" />
@@ -64,7 +65,7 @@
 
     <!-- Education -->
     <ResumeSection title="Education">
-      <v-card v-for="(ed, e) in education" :key="e" class="hover-shadow border-l-secondary card-pad mb-6" elevation="2">
+      <v-card v-for="(ed, e) in education" :key="e" class="app-card hover-shadow card-pad mb-6" elevation="0">
         <v-card-text>
           <ResumeHeader :title="ed.degree" :subtitle="ed.school" icon="mdi-school" :date="ed.date" :dateChip="true" />
 
@@ -89,7 +90,7 @@
     <ResumeSection title="Certifications">
       <v-row class="align-stretch">
         <v-col v-for="(cert, c) in certifications" :key="c" cols="12" md="6" class="d-flex">
-          <v-card class="hover-shadow border-l-primary card-pad d-flex flex-column h-100" elevation="2">
+          <v-card class="app-card hover-shadow card-pad d-flex flex-column h-100" elevation="0">
             <v-card-title class="flex-grow-1">
               <div class="d-flex align-start ga-4">
                 <div class="role-badge">
@@ -118,7 +119,7 @@
         Publications
       </h3>
       <div class="space-y-6 mb-8">
-        <v-card v-for="(pub, p) in publications" :key="p" class="hover-shadow border-l-primary card-pad" elevation="2">
+        <v-card v-for="(pub, p) in publications" :key="p" class="app-card hover-shadow card-pad" elevation="0">
           <v-card-title>
             <div class="d-flex flex-column flex-md-row justify-space-between align-start ga-4 w-100">
               <div class="flex-grow-1">
@@ -149,8 +150,7 @@
         Conference Presentations
       </h3>
       <div class="space-y-6">
-        <v-card v-for="(pres, p) in presentations" :key="p" class="hover-shadow border-l-secondary card-pad"
-          elevation="2">
+        <v-card v-for="(pres, p) in presentations" :key="p" class="app-card hover-shadow card-pad" elevation="0">
           <v-card-title>
             <div class="d-flex flex-column flex-md-row justify-space-between align-start ga-4 w-100">
               <div class="flex-grow-1">
@@ -178,7 +178,7 @@
         Clearances
       </h3>
       <div class="space-y-6 mb-8">
-        <v-card class="hover-shadow border-l-primary h-100 card-pad" elevation="2">
+        <v-card class="app-card hover-shadow h-100 card-pad" elevation="0">
           <v-card-text>
             <ChipList :items="clearances" containerClass="d-flex flex-wrap ga-2" />
           </v-card-text>
@@ -190,7 +190,7 @@
         Professional Memberships
       </h3>
       <div class="space-y-6">
-        <v-card class="hover-shadow border-l-secondary h-100 card-pad" elevation="2">
+        <v-card class="app-card hover-shadow h-100 card-pad" elevation="0">
           <v-card-text class="space-y-6">
             <div v-for="(member, m) in memberships" :key="m"
               class="d-flex flex-column flex-sm-row justify-space-between align-sm-center ga-2">
@@ -217,7 +217,6 @@ import {
   presentations,
 } from "../data/resumeData";
 import ResumeSection from "../components/resume/ResumeSection.vue";
-import ResumeCard from "../components/resume/ResumeCard.vue";
 import ResumeHeader from "../components/resume/ResumeHeader.vue";
 import ChipList from "../components/ChipList.vue";
 

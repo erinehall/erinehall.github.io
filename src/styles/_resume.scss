@@ -4,6 +4,7 @@
   max-width: 900px;
   margin: 0 auto;
   background-color: #ffffff;
+  padding-block: 4rem;
 
   h1 {
     text-align: center;
@@ -45,29 +46,6 @@
   }
 }
 
-.hover-shadow {
-  transition: box-shadow 0.25s ease;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
-}
-
-.border-l-primary {
-  border-left: 4px solid rgb(var(--v-theme-primary));
-}
-
-.border-l-secondary {
-  border-left: 4px solid rgb(var(--v-theme-secondary));
-}
-
-.role-card {
-  border: 1px solid rgba(111, 78, 55, 0.18);
-  border-radius: 14px;
-  background: rgb(var(--v-theme-surface));
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
 .role-header {
   color: rgb(var(--v-theme-primary));
 }
@@ -105,14 +83,6 @@
 
 .date-chip {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.card-pad .v-card-title {
-  padding: 16px 24px;
-}
-
-.card-pad .v-card-text {
-  padding: 16px 24px;
 }
 
 .role-card .v-card-text {
@@ -185,21 +155,6 @@
   margin-bottom: 1.25rem;
 }
 
-.resume-card {
-  padding: 1rem 0;
-
-  ul {
-    margin: 0.5rem 0 0 1.2rem;
-    padding: 0;
-    max-width: 65ch;
-
-    li {
-      margin-bottom: 0.6rem;
-      line-height: 1.6;
-    }
-  }
-}
-
 .date-location {
   font-size: 0.9rem;
   font-style: italic;
@@ -237,36 +192,4 @@
 
 .resume-publication-link {
   font-size: 0.9rem;
-}
-
-.skill-card {
-  background-color: variables.$accent-translucent;
-}
-.border-l-primary {
-  border-left: 4px solid rgb(var(--v-theme-primary));
-}
-.border-l-secondary {
-  border-left: 4px solid rgb(var(--v-theme-secondary));
-}
-.hover-shadow {
-  transition: box-shadow 0.25s ease;
-}
-.hover-shadow:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
-}
-.max-w-4xl {
-  max-width: 896px;
-  margin-inline: auto;
-}
-.py-16 {
-  padding-block: 4rem;
-}
-.px-6 {
-  padding-inline: 1.5rem;
-}
-.space-y-6 > * + * {
-  margin-top: 1.5rem;
-}
-.space-y-8 > * + * {
-  margin-top: 2rem;
 }
