@@ -8,8 +8,8 @@
     </div>
 
     <!-- Experience -->
-    <ResumeSection title="Experience">
-      <div v-for="(job, j) in experience" :key="j" class="mb-10">
+    <ResumeSection title="Experience" class="scroll-fade">
+      <div v-for="(job, j) in experience" :key="j" class="mb-10 scroll-fade">
         <div class="d-flex flex-column flex-md-row justify-space-between align-start w-100 ga-2 mb-4">
           <div>
             <h3 class="text-h6 text-primary d-flex align-center ga-2 mb-1 wrap">
@@ -31,7 +31,7 @@
           </v-chip>
         </div>
 
-        <v-card v-for="(role, i) in job.roles" :key="i" class="app-card hover-shadow card-pad mb-4 role-card"
+        <v-card v-for="(role, i) in job.roles" :key="i" class="app-card hover-shadow card-pad mb-4 role-card scroll-fade"
           elevation="0">
           <v-card-title class="pb-2 d-flex align-center ga-3 role-header">
             <div v-if="role.icon" class="role-badge">
@@ -42,37 +42,37 @@
           <v-divider class="role-divider mx-4 mb-1" />
           <v-card-text>
             <ul class="role-bullets pl-6">
-              <li v-for="(bullet, b) in role.bullets" :key="b">
+              <li v-for="(bullet, b) in role.bullets" :key="b" class="reveal-child">
                 {{ bullet }}
               </li>
             </ul>
             <ChipList :items="role.skills" containerClass="pt-2 d-flex flex-wrap ga-2"
-              :chipProps="{ size: 'x-small' }" />
+              chipClass="reveal-child" :chipProps="{ size: 'x-small' }" />
           </v-card-text>
         </v-card>
       </div>
     </ResumeSection>
 
     <!-- Skills -->
-    <ResumeSection title="Skills">
-      <v-card class="app-card hover-shadow card-pad" elevation="0">
+    <ResumeSection title="Skills" class="scroll-fade">
+      <v-card class="app-card hover-shadow card-pad scroll-fade" elevation="0">
         <v-card-text class="pt-8">
           <ChipList :items="skills" containerClass="d-flex flex-wrap justify-center ga-2"
-            containerStyle="row-gap:1rem" />
+            chipClass="reveal-child" containerStyle="row-gap:1rem" />
         </v-card-text>
       </v-card>
     </ResumeSection>
 
     <!-- Education -->
-    <ResumeSection title="Education">
-      <v-card v-for="(ed, e) in education" :key="e" class="app-card hover-shadow card-pad mb-6" elevation="0">
+    <ResumeSection title="Education" class="scroll-fade">
+      <v-card v-for="(ed, e) in education" :key="e" class="app-card hover-shadow card-pad mb-6 scroll-fade" elevation="0">
         <v-card-text>
           <ResumeHeader :title="ed.degree" :subtitle="ed.school" icon="mdi-school" :date="ed.date" :dateChip="true" />
 
           <div v-if="ed.details?.length || ed.thesis" class="mb-2">
             <ul class="pl-6">
-              <li v-for="(detail, d) in ed.details" :key="d">{{ detail }}</li>
-              <li v-if="ed.thesis">Thesis: {{ ed.thesis.title }}</li>
+              <li v-for="(detail, d) in ed.details" :key="d" class="reveal-child">{{ detail }}</li>
+              <li v-if="ed.thesis" class="reveal-child">Thesis: {{ ed.thesis.title }}</li>
             </ul>
           </div>
 
@@ -87,10 +87,10 @@
     </ResumeSection>
 
     <!-- Certifications -->
-    <ResumeSection title="Certifications">
+    <ResumeSection title="Certifications" class="scroll-fade">
       <v-row class="align-stretch">
         <v-col v-for="(cert, c) in certifications" :key="c" cols="12" md="6" class="d-flex">
-          <v-card class="app-card hover-shadow card-pad d-flex flex-column h-100" elevation="0">
+          <v-card class="app-card hover-shadow card-pad d-flex flex-column h-100 scroll-fade" elevation="0">
             <v-card-title class="flex-grow-1">
               <div class="d-flex align-start ga-4">
                 <div class="role-badge">
@@ -112,14 +112,14 @@
     </ResumeSection>
 
     <!-- Publications & Presentations -->
-    <ResumeSection title="Publications & Presentations">
+    <ResumeSection title="Publications & Presentations" class="scroll-fade">
       <!-- Publications -->
       <h3 class="text-h5 mb-4 text-primary d-flex align-center ga-2">
         <v-icon>mdi-file-document</v-icon>
         Publications
       </h3>
       <div class="space-y-6 mb-8">
-        <v-card v-for="(pub, p) in publications" :key="p" class="app-card hover-shadow card-pad" elevation="0">
+        <v-card v-for="(pub, p) in publications" :key="p" class="app-card hover-shadow card-pad scroll-fade" elevation="0">
           <v-card-title>
             <div class="d-flex flex-column flex-md-row justify-space-between align-start ga-4 w-100">
               <div class="flex-grow-1">
@@ -137,7 +137,7 @@
             </div>
           </v-card-title>
           <v-card-text>
-            <v-chip variant="tonal" color="primary" size="small" rounded="pill">
+            <v-chip variant="tonal" color="primary" size="small" rounded="pill" class="reveal-child">
               DOI: {{ pub.doi }}
             </v-chip>
           </v-card-text>
@@ -150,7 +150,7 @@
         Conference Presentations
       </h3>
       <div class="space-y-6">
-        <v-card v-for="(pres, p) in presentations" :key="p" class="app-card hover-shadow card-pad" elevation="0">
+        <v-card v-for="(pres, p) in presentations" :key="p" class="app-card hover-shadow card-pad scroll-fade" elevation="0">
           <v-card-title>
             <div class="d-flex flex-column flex-md-row justify-space-between align-start ga-4 w-100">
               <div class="flex-grow-1">
@@ -160,7 +160,7 @@
                   <div class="d-flex align-center ga-1">
                     <v-icon size="12">mdi-calendar</v-icon>{{ pres.date }}
                   </div>
-                  <v-chip v-if="pres.role" color="secondary" variant="tonal" size="small" rounded="pill">
+                  <v-chip v-if="pres.role" color="secondary" variant="tonal" size="small" rounded="pill" class="reveal-child">
                     {{ pres.role }}
                   </v-chip>
                 </div>
@@ -172,15 +172,15 @@
     </ResumeSection>
 
     <!-- Clearances & Memberships -->
-    <ResumeSection title="Clearances & Professional Memberships">
+    <ResumeSection title="Clearances & Professional Memberships" class="scroll-fade">
       <h3 class="text-h5 mb-4 text-primary d-flex align-center ga-2">
         <v-icon>mdi-shield-check</v-icon>
         Clearances
       </h3>
       <div class="space-y-6 mb-8">
-        <v-card class="app-card hover-shadow h-100 card-pad" elevation="0">
+        <v-card class="app-card hover-shadow h-100 card-pad scroll-fade" elevation="0">
           <v-card-text>
-            <ChipList :items="clearances" containerClass="d-flex flex-wrap ga-2" />
+            <ChipList :items="clearances" containerClass="d-flex flex-wrap ga-2" chipClass="reveal-child" />
           </v-card-text>
         </v-card>
       </div>
@@ -190,10 +190,10 @@
         Professional Memberships
       </h3>
       <div class="space-y-6">
-        <v-card class="app-card hover-shadow h-100 card-pad" elevation="0">
+        <v-card class="app-card hover-shadow h-100 card-pad scroll-fade" elevation="0">
           <v-card-text class="space-y-6">
             <div v-for="(member, m) in memberships" :key="m"
-              class="d-flex flex-column flex-sm-row justify-space-between align-sm-center ga-2">
+              class="d-flex flex-column flex-sm-row justify-space-between align-sm-center ga-2 reveal-child">
               <span class="text-medium-emphasis wrap">{{ member.name }}</span>
               <v-chip color="secondary" variant="tonal" size="small" rounded="pill">{{ member.date }}</v-chip>
             </div>
@@ -219,19 +219,9 @@ import {
 import ResumeSection from "../components/resume/ResumeSection.vue";
 import ResumeHeader from "../components/resume/ResumeHeader.vue";
 import ChipList from "../components/ChipList.vue";
+import { initScrollReveal } from "../utils/scrollReveal.js";
 
 onMounted(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-  document.querySelectorAll(".scroll-fade").forEach((el) => observer.observe(el));
+  initScrollReveal();
 });
 </script>

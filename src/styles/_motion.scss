@@ -1,0 +1,9 @@
+:root {
+  --motion-duration-short: 200ms;
+  --motion-duration-medium: 300ms;
+  --motion-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-distance: 12px;
+  --motion-stagger: 60ms;
+}
+
+/* Reduced motion handling can be done in components */
