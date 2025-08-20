@@ -82,26 +82,13 @@
   animation: bounce 2s infinite;
 }
 
-.scroll-arrow {
-  display: block;
-  width: 4px;
-  height: 24px;
-  margin: 0 auto;
-  background: rgb(var(--v-theme-primary));
-  position: relative;
-  opacity: 0.5;
-}
-
-.scroll-arrow::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 12px solid rgb(var(--v-theme-primary));
-}
+  .scroll-arrow {
+    display: block;
+    margin: 0 auto;
+    font-size: 32px;
+    color: rgb(var(--v-theme-primary));
+    opacity: 0.5;
+  }
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

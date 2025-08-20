@@ -44,8 +44,8 @@
         />
       </v-col>
     </v-row>
-    <div class="scroll-indicator">
-      <span class="scroll-arrow" aria-hidden="true"></span>
+    <div v-if="showArrow" class="scroll-indicator">
+      <v-icon class="scroll-arrow" aria-hidden="true">mdi-arrow-down</v-icon>
     </div>
   </v-container>
 </template>
@@ -53,4 +53,22 @@
 <script setup>
 import profilePic from "../assets/profile-pic.jpg";
 import { aboutPageSkills } from "../data/resumeData";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+
+const showArrow = ref(true);
+
+const handleScroll = () => {
+  if (window.scrollY > 0) {
+    showArrow.value = false;
+    window.removeEventListener("scroll", handleScroll);
+  }
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll, { passive: true });
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
