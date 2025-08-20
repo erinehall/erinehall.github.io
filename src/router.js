@@ -19,10 +19,12 @@ export function navigate(path) {
   if (currentRoute.value === path) return;
   history.pushState({}, "", path);
   currentRoute.value = path;
+  window.scrollTo(0, 0);
 }
 
 window.addEventListener("popstate", () => {
   currentRoute.value = window.location.pathname;
+  window.scrollTo(0, 0);
 });
 
 export function getCurrentComponent() {
