@@ -1,12 +1,13 @@
 <template>
   <div v-if="items?.length" :class="containerClass" :style="containerStyle">
-    <v-chip v-for="(item, i) in items" :key="i" :class="chipClass" v-bind="chipProps">
+    <v-chip v-for="(item, i) in items" :key="i" :class="chipClass" v-bind="mergedChipProps">
       {{ item }}
     </v-chip>
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 interface Props {
   items: string[];
   containerClass?: string | string[];
@@ -14,16 +15,18 @@ interface Props {
   chipClass?: string | string[];
   chipProps?: Record<string, any>;
 }
-
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   containerClass: "",
   containerStyle: undefined,
   chipClass: "",
-  chipProps: () => ({
-    variant: "outlined",
-    color: "primary",
-    size: "small",
-    rounded: "lg",
-  }),
+  chipProps: () => ({}),
 });
+
+const mergedChipProps = computed(() => ({
+  variant: "tonal",
+  color: "primary",
+  size: "small",
+  rounded: "pill",
+  ...props.chipProps,
+}));
 </script>

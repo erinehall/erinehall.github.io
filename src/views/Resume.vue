@@ -24,25 +24,29 @@
               </span>
             </div>
           </div>
-          <v-chip color="secondary" variant="elevated" size="small" class="text-white d-flex align-center ga-1">
+          <v-chip color="secondary" variant="tonal" size="x-small" rounded="pill"
+            class="px-3 py-3 date-chip ms-auto d-flex align-center ga-1">
             <v-icon size="14" start>mdi-calendar</v-icon>
             {{ job.date }}
           </v-chip>
         </div>
 
         <v-card v-for="(role, i) in job.roles" :key="i" class="hover-shadow role-card card-pad mb-4" elevation="0">
-          <v-card-title class="pb-2 d-flex align-center ga-2 text-primary">
-            <v-icon v-if="role.icon" :icon="role.icon" size="18" />
-            <span class="text-subtitle-1 wrap">{{ role.heading }}</span>
+          <v-card-title class="pb-2 d-flex align-center ga-3 role-header">
+            <div v-if="role.icon" class="role-badge">
+              <v-icon :icon="role.icon" size="16" />
+            </div>
+            <span class="role-title text-subtitle-1 wrap">{{ role.heading }}</span>
           </v-card-title>
+          <v-divider class="role-divider mx-4 mb-1" />
           <v-card-text>
-            <ul class="pl-6">
-              <li v-for="(bullet, b) in role.bullets" :key="b" class="mb-2">
+            <ul class="role-bullets pl-6">
+              <li v-for="(bullet, b) in role.bullets" :key="b">
                 {{ bullet }}
               </li>
             </ul>
             <ChipList :items="role.skills" containerClass="pt-2 d-flex flex-wrap ga-2"
-              :chipProps="{ size: 'x-small', variant: 'outlined', color: 'primary' }" />
+              :chipProps="{ size: 'x-small' }" />
           </v-card-text>
         </v-card>
       </div>
@@ -52,8 +56,8 @@
     <ResumeSection title="Skills">
       <v-card class="hover-shadow card-pad">
         <v-card-text class="pt-8">
-          <ChipList :items="skills" containerClass="d-flex flex-wrap justify-center ga-2" containerStyle="row-gap:1rem"
-            :chipProps="{ rounded: 'lg', size: 'small', variant: 'outlined', color: 'primary' }" />
+          <ChipList :items="skills" containerClass="d-flex flex-wrap justify-center ga-2"
+            containerStyle="row-gap:1rem" />
         </v-card-text>
       </v-card>
     </ResumeSection>
@@ -88,9 +92,9 @@
           <v-card class="hover-shadow border-l-primary card-pad d-flex flex-column h-100" elevation="2">
             <v-card-title class="flex-grow-1">
               <div class="d-flex align-start ga-4">
-                <v-avatar color="primary-lighten-4" size="48">
-                  <v-icon color="primary">mdi-trophy</v-icon>
-                </v-avatar>
+                <div class="role-badge">
+                  <v-icon color="primary" size="16">mdi-trophy</v-icon>
+                </div>
                 <div class="flex-grow-1">
                   <h3 class="text-h6 text-primary mb-1 wrap" style="line-height:1.4">{{ cert.name }}</h3>
                   <p class="text-medium-emphasis wrap">{{ cert.organization }}</p>
@@ -99,7 +103,7 @@
             </v-card-title>
             <v-card-text class="d-flex justify-space-between align-center mt-auto">
               <span class="text-caption">Completed:</span>
-              <v-chip color="secondary" class="text-white" size="small">{{ cert.date }}</v-chip>
+              <v-chip color="secondary" variant="tonal" size="small" rounded="pill">{{ cert.date }}</v-chip>
             </v-card-text>
           </v-card>
         </v-col>
@@ -132,7 +136,7 @@
             </div>
           </v-card-title>
           <v-card-text>
-            <v-chip variant="outlined" color="primary" size="small">
+            <v-chip variant="tonal" color="primary" size="small" rounded="pill">
               DOI: {{ pub.doi }}
             </v-chip>
           </v-card-text>
@@ -156,7 +160,7 @@
                   <div class="d-flex align-center ga-1">
                     <v-icon size="12">mdi-calendar</v-icon>{{ pres.date }}
                   </div>
-                  <v-chip v-if="pres.role" color="secondary" size="small" class="text-white">
+                  <v-chip v-if="pres.role" color="secondary" variant="tonal" size="small" rounded="pill">
                     {{ pres.role }}
                   </v-chip>
                 </div>
@@ -176,8 +180,7 @@
       <div class="space-y-6 mb-8">
         <v-card class="hover-shadow border-l-primary h-100 card-pad" elevation="2">
           <v-card-text>
-            <ChipList :items="clearances" containerClass="d-flex flex-wrap ga-2"
-              :chipProps="{ variant: 'outlined', color: 'primary' }" />
+            <ChipList :items="clearances" containerClass="d-flex flex-wrap ga-2" />
           </v-card-text>
         </v-card>
       </div>
@@ -192,7 +195,7 @@
             <div v-for="(member, m) in memberships" :key="m"
               class="d-flex flex-column flex-sm-row justify-space-between align-sm-center ga-2">
               <span class="text-medium-emphasis wrap">{{ member.name }}</span>
-              <v-chip color="secondary" class="text-white" size="small">{{ member.date }}</v-chip>
+              <v-chip color="secondary" variant="tonal" size="small" rounded="pill">{{ member.date }}</v-chip>
             </div>
           </v-card-text>
         </v-card>

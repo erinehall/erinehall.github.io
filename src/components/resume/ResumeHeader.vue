@@ -2,7 +2,9 @@
     <div class="resume-item-header">
         <h3 class="d-flex align-center wrap">
             <template v-if="icon">
-                <v-icon :icon="icon" start class="mr-2" />
+                <div class="role-badge mr-2">
+                    <v-icon :icon="icon" size="16" color="primary" />
+                </div>
             </template>
             {{ company ? `${company} — ${title}` : title }}
         </h3>
@@ -14,7 +16,7 @@
         <span class="date-location text-medium-emphasis text-body-1">
             <template v-if="location">{{ location }}<span v-if="date"> | </span></template>
             <template v-if="date">
-                <v-chip v-if="dateChip" size="small" color="secondary" class="ml-1 text-white">
+                <v-chip v-if="dateChip" size="small" color="secondary" variant="tonal" rounded="pill" class="ml-1">
                     {{ date }}
                 </v-chip>
                 <template v-else>{{ date }}</template>

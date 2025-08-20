@@ -63,9 +63,48 @@
 
 .role-card {
   border: 1px solid rgba(111, 78, 55, 0.18);
-  border-left: 4px solid rgb(var(--v-theme-secondary));
   border-radius: 14px;
   background: rgb(var(--v-theme-surface));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.role-header {
+  color: rgb(var(--v-theme-primary));
+}
+
+
+.role-badge {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border-radius: 6px;
+  background: rgb(var(--v-theme-primary-lighten-4));
+  border: 1px solid rgba(var(--v-theme-primary), 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.role-divider {
+  opacity: 0.2;
+}
+
+
+.role-bullets {
+  margin: 0.25rem 0 0 0;
+  padding-left: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.875rem;
+  line-height: 1.6;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.date-chip {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .card-pad .v-card-title {
@@ -74,6 +113,10 @@
 
 .card-pad .v-card-text {
   padding: 16px 24px;
+}
+
+.role-card .v-card-text {
+  padding-top: 8px;
 }
 
 .space-y-6 > * + * {

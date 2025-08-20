@@ -8,7 +8,7 @@
           <v-chip
             v-for="skill in aboutPageSkills.slice(0, 5)"
             :key="skill"
-            rounded="lg"
+            rounded="pill"
             variant="tonal"
             color="secondary"
           >
