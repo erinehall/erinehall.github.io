@@ -41,11 +41,8 @@
                 {{ bullet }}
               </li>
             </ul>
-            <div v-if="role.skills?.length" class="pt-2 d-flex flex-wrap ga-2">
-              <v-chip v-for="skill in role.skills" :key="skill" size="x-small" variant="outlined" color="primary">
-                {{ skill }}
-              </v-chip>
-            </div>
+            <ChipList :items="role.skills" containerClass="pt-2 d-flex flex-wrap ga-2"
+              :chipProps="{ size: 'x-small', variant: 'outlined', color: 'primary' }" />
           </v-card-text>
         </v-card>
       </div>
@@ -55,11 +52,8 @@
     <ResumeSection title="Skills">
       <v-card class="hover-shadow card-pad">
         <v-card-text class="pt-8">
-          <div class="d-flex flex-wrap justify-center ga-2" style="row-gap:1rem">
-            <v-chip v-for="skill in skills" :key="skill" rounded="lg" size="small" variant="outlined" color="primary">
-              {{ skill }}
-            </v-chip>
-          </div>
+          <ChipList :items="skills" containerClass="d-flex flex-wrap justify-center ga-2" containerStyle="row-gap:1rem"
+            :chipProps="{ rounded: 'lg', size: 'small', variant: 'outlined', color: 'primary' }" />
         </v-card-text>
       </v-card>
     </ResumeSection>
@@ -182,11 +176,8 @@
       <div class="space-y-6 mb-8">
         <v-card class="hover-shadow border-l-primary h-100 card-pad" elevation="2">
           <v-card-text>
-            <div class="d-flex flex-wrap ga-2">
-              <v-chip v-for="(clearance, i) in clearances" :key="i" variant="outlined" color="primary">
-                {{ clearance }}
-              </v-chip>
-            </div>
+            <ChipList :items="clearances" containerClass="d-flex flex-wrap ga-2"
+              :chipProps="{ variant: 'outlined', color: 'primary' }" />
           </v-card-text>
         </v-card>
       </div>
@@ -225,6 +216,7 @@ import {
 import ResumeSection from "../components/resume/ResumeSection.vue";
 import ResumeCard from "../components/resume/ResumeCard.vue";
 import ResumeHeader from "../components/resume/ResumeHeader.vue";
+import ChipList from "../components/ChipList.vue";
 
 onMounted(() => {
   const observer = new IntersectionObserver(

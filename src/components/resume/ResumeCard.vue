@@ -15,17 +15,14 @@
 
     <slot />
 
-    <div v-if="skills?.length" class="mt-2">
-      <v-chip v-for="skill in skills" :key="skill" rounded="lg" size="small" variant="tonal" color="secondary"
-        class="ma-1">
-        {{ skill }}
-      </v-chip>
-    </div>
+    <ChipList :items="skills ?? []" containerClass="mt-2" chipClass="ma-1"
+      :chipProps="{ rounded: 'lg', size: 'small', variant: 'tonal', color: 'secondary' }" />
   </div>
 </template>
 
 <script setup lang="ts">
 import ResumeHeader from "./ResumeHeader.vue";
+import ChipList from "../ChipList.vue";
 
 interface HeaderData {
   title: string;
