@@ -111,14 +111,9 @@
       </v-row>
     </ResumeSection>
 
-    <!-- Publications & Presentations -->
-    <ResumeSection title="Publications & Presentations" class="scroll-fade">
-      <!-- Publications -->
-      <h3 class="text-h5 mb-4 text-primary d-flex align-center ga-2">
-        <v-icon>mdi-file-document</v-icon>
-        Publications
-      </h3>
-      <div class="space-y-6 mb-8">
+    <!-- Publications -->
+    <ResumeSection title="Publications" class="scroll-fade">
+      <div class="space-y-6">
         <v-card v-for="(pub, p) in publications" :key="p" class="app-card hover-shadow card-pad scroll-fade" elevation="0">
           <v-card-title>
             <div class="d-flex flex-column flex-md-row justify-space-between align-start ga-4 w-100">
@@ -143,12 +138,10 @@
           </v-card-text>
         </v-card>
       </div>
+    </ResumeSection>
 
-      <!-- Presentations -->
-      <h3 class="text-h5 mb-4 text-primary d-flex align-center ga-2">
-        <v-icon>mdi-presentation</v-icon>
-        Conference Presentations
-      </h3>
+    <!-- Presentations -->
+    <ResumeSection title="Presentations" class="scroll-fade">
       <div class="space-y-6">
         <v-card v-for="(pres, p) in presentations" :key="p" class="app-card hover-shadow card-pad scroll-fade" elevation="0">
           <v-card-title>
@@ -171,24 +164,19 @@
       </div>
     </ResumeSection>
 
-    <!-- Clearances & Memberships -->
-    <ResumeSection title="Clearances & Professional Memberships" class="scroll-fade">
-      <h3 class="text-h5 mb-4 text-primary d-flex align-center ga-2">
-        <v-icon>mdi-shield-check</v-icon>
-        Clearances
-      </h3>
-      <div class="space-y-6 mb-8">
+    <!-- Clearances -->
+    <ResumeSection title="Clearances" class="scroll-fade">
+      <div class="space-y-6">
         <v-card class="app-card hover-shadow h-100 card-pad scroll-fade" elevation="0">
           <v-card-text>
             <ChipList :items="clearances" containerClass="d-flex flex-wrap ga-2" chipClass="reveal-child" />
           </v-card-text>
         </v-card>
       </div>
+    </ResumeSection>
 
-      <h3 class="text-h5 mb-4 text-primary d-flex align-center ga-2">
-        <v-icon>mdi-account-group</v-icon>
-        Professional Memberships
-      </h3>
+    <!-- Professional Memberships -->
+    <ResumeSection title="Professional Memberships" class="scroll-fade">
       <div class="space-y-6">
         <v-card class="app-card hover-shadow h-100 card-pad scroll-fade" elevation="0">
           <v-card-text class="space-y-6">
