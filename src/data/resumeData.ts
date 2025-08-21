@@ -74,6 +74,7 @@ export const experience = [
       },
       {
         heading: "IRS Labs",
+        icon: "mdi-lightbulb-outline",
         bullets: [
           "Provided updates and maintenance in AngularJS for a company-hosted platform for concept demonstration and prototyping early web applications",
         ],
