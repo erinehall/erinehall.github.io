@@ -12,6 +12,10 @@
   padding: 0;
   position: relative;
   min-height: calc(100vh - var(--v-layout-top, 0px));
+
+  @include bp.respond-down(md) {
+    padding-inline: 16px;
+  }
 }
 
 .hero-content {
@@ -22,6 +26,21 @@
   padding-top: 30px;
   flex: 1;
   max-width: 500px;
+
+  @include bp.respond-down(md) {
+    text-align: center;
+
+    .hero-skills,
+    .hero-links {
+      justify-content: center;
+      padding-left: 0;
+    }
+
+    h1::after {
+      width: 100px;
+      margin-inline: auto;
+    }
+  }
 
   h1 {
     font-size: 3.2em;

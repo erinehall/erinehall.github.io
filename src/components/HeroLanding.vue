@@ -4,7 +4,7 @@
       <v-col cols="12" md="6" class="text-block fade-in">
         <h1>Erin Hall</h1>
         <p class="subheading">Intermediate Software Systems Engineer</p>
-        <div class="d-flex flex-wrap ga-2 my-4 fade-in">
+        <div class="d-flex flex-wrap ga-2 my-4 fade-in hero-skills">
           <v-chip
             v-for="skill in aboutPageSkills.slice(0, 5)"
             :key="skill"
@@ -15,7 +15,7 @@
             {{ skill }}
           </v-chip>
         </div>
-        <div class="d-flex align-center ga-6 mt-8 pl-4">
+        <div class="d-flex align-center ga-6 mt-8 hero-links">
           <a
             href="https://github.com/erinehall"
             target="_blank"
