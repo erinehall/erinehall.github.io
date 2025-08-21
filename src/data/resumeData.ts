@@ -17,6 +17,7 @@ export const experience = [
       },
       {
         heading: "ATT&CK",
+        icon: "mdi-ampersand",
         bullets: [
           "Advancing tools, websites, and libraries across the ATT&CK ecosystem, collaborating on enhancements to reduce technical debt and support growth and sustainability",
         ],
@@ -49,6 +50,7 @@ export const experience = [
       },
       {
         heading: "ATT&CK",
+        icon: "mdi-ampersand",
         bullets: [
           "Developed and maintained tools, websites, and libraries across the ATT&CK ecosystem to advance threat-informed defense and understanding of adversary tactics and techniques",
         ],
