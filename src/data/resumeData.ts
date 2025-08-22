@@ -11,7 +11,6 @@ export const experience = [
         bullets: [
           "Lead frontend developer for a React-based High Performance Computing (HPC) analytics dashboard, making design decisions, planning and implementing new features, and improving usability through user feedback",
           "Coordinating HPC engagement for 900+ users by conducting surveys, organizing monthly informational sessions and advanced trainings, and developing an HPC learning path to strengthen organizational expertise",
-          "Delivered reports and briefings to advise a sponsor on HPC cluster setup and operational best practices",
         ],
         skills: ["React", "TypeScript", "Vite", "Docker", "Python", "Django"],
       },
@@ -28,6 +27,14 @@ export const experience = [
         icon: "mdi-account-group",
         bullets: [
           "Department intern coordinator, overseeing hiring, onboarding, mentorship, and performance evaluations",
+        ],
+        skills: ["Leadership", "Mentorship"],
+      },
+      {
+        heading: "Strategic Advisory for Sponsor-owned HPC Cluster",
+        icon: "mdi-server-network",
+        bullets: [
+          "Delivered reports and briefings to advise a sponsor on HPC cluster setup and operational best practices",
         ],
         skills: ["Leadership", "Mentorship"],
       },
@@ -55,6 +62,14 @@ export const experience = [
           "Developed and maintained tools, websites, and libraries across the ATT&CK ecosystem to advance threat-informed defense and understanding of adversary tactics and techniques",
         ],
         skills: ["HTML", "Python", "AngularJS"],
+      },
+      {
+        heading: "Insight Explorer",
+        icon: "mdi-chart-line",
+        bullets: [
+          "Developed and deployed a React-based website for presenting risk-based emerging technology area assessments and investment roadmaps for a new sponsor",
+        ],
+        skills: ["React"],
       },
     ],
   },
