@@ -36,7 +36,11 @@ export const experience = [
         bullets: [
           "Delivered reports and briefings to advise a sponsor on HPC cluster setup and operational best practices",
         ],
-        skills: ["Leadership", "Mentorship"],
+        skills: [
+          "HPC Strategy",
+          "Cluster Utilization Reporting",
+          "Technical Writing",
+        ],
       },
     ],
   },
