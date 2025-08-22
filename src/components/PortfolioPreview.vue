@@ -1,5 +1,5 @@
 <template>
-  <v-container class="portfolio-preview py-8 mb-4" max-width="960">
+  <v-container class="portfolio-preview py-8 mb-4" max-width="900">
     <h2 class="text-center mb-6">Recent Work</h2>
     <v-row class="justify-center">
       <v-col

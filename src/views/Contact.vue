@@ -1,5 +1,5 @@
 <template>
-  <v-container class="contact-page py-8" max-width="960">
+  <v-container class="contact-page py-8" max-width="900">
     <h1 class="text-center mb-4">Let's Connect!</h1>
     <v-row justify="center">
       <v-col cols="12" md="6">
