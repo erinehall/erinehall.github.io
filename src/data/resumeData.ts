@@ -73,7 +73,7 @@ export const experience = [
         bullets: [
           "Developed and deployed a React-based website for presenting risk-based emerging technology area assessments and investment roadmaps for a new sponsor",
         ],
-        skills: ["React"],
+        skills: ["React", "Typescript", "HTML", "CSS"],
       },
     ],
   },
