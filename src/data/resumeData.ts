@@ -31,7 +31,7 @@ export const experience = [
         skills: ["Leadership", "Mentorship"],
       },
       {
-        heading: "Strategic Advisory for Sponsor-owned HPC Cluster",
+        heading: "Sponsor HPC Advisory",
         icon: "mdi-server-network",
         bullets: [
           "Delivered reports and briefings to advise a sponsor on HPC cluster setup and operational best practices",
