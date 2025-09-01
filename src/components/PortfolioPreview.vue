@@ -35,8 +35,4 @@ function goToPortfolio() {
 .compact-card {
   max-width: 300px;
 }
-
-.compact-card .v-img {
-  height: 150px;
-}
 </style>
