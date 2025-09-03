@@ -1,7 +1,7 @@
 <template>
   <v-container class="portfolio-preview py-8 mb-4" max-width="900">
     <h2 class="text-center mb-6">Recent Work</h2>
-    <v-row class="justify-center">
+    <v-row class="justify-center" align="stretch">
       <v-col
         v-for="(item, i) in items"
         :key="i"
@@ -9,7 +9,7 @@
         md="4"
         class="d-flex justify-center"
       >
-        <PortfolioCard class="compact-card" v-bind="item" />
+        <PortfolioCard class="compact-card w-100" v-bind="item" />
       </v-col>
     </v-row>
     <div class="d-flex justify-center mt-6">
