@@ -1,30 +1,29 @@
 @use "./variables";
 @use "./breakpoints" as bp;
 
+
 .hero-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background:
     linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #fff 100%),
     url("../assets/wallpaper.png") no-repeat center center;
   background-size: cover;
-  padding: 0;
   position: relative;
-  min-height: calc(100vh - var(--v-layout-top, 0px));
-
-  @include bp.respond-down(md) {
-    padding-inline: 16px;
-  }
+  height: calc(100vh - var(--v-layout-top, 0px));
 }
 
 .hero-content {
-  gap: 40px;
+  height: 100%;
+}
+
+.hero-column {
+  height: 50%;
+
+  @include bp.respond(md) {
+    height: 100%;
+  }
 }
 
 .text-block {
-  padding-top: 30px;
-  flex: 1;
   max-width: 500px;
 
   @include bp.respond-down(md) {
@@ -67,21 +66,13 @@
   }
 }
 
-.image-block {
-  flex-shrink: 0;
-  display: flex;
-  align-items: stretch;
-}
 
 .portrait {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-
-  @include bp.respond(md) {
-    width: auto;
-  }
+  max-width: 400px;
 }
 
 /* Secondary hero reveal */
