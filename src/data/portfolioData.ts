@@ -1,3 +1,4 @@
+/// <reference path="../declarations.d.ts" />
 import virginia_tech from "../assets/virginia-tech.png";
 import aied from "../assets/aied-2023.png";
 import hcii from "../assets/hcii-2024.png";
