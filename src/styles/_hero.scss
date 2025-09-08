@@ -20,12 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 $animationDuration: 30;
 $amount: 12;
 
-$colors: (
-  #E3D5CA,
-  #B99B8A,
-  #e1e1e1,
-  #828c97
-);
+$colors: variables.$bubble-colors;
 
 .hero-wrapper {
   position: relative;
@@ -33,8 +28,8 @@ $colors: (
   overflow: hidden;
 
   background:
-    linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #fff 100%),
-    #fff;
+    linear-gradient(to bottom, rgba(variables.$color-white, 0) 70%, variables.$color-white 100%),
+    variables.$color-white;
 
   @include bp.respond(md) {
     height: calc(100vh - var(--v-layout-top, 0px));
@@ -68,7 +63,7 @@ $colors: (
         circle,
         rgba($color, 0.9) 0%,
         rgba($color, 0.4) 40%,
-        rgba(255, 255, 255, 0) 100%
+        rgba(variables.$color-white, 0) 100%
       );
 
       top: random(100) * 1%;
@@ -116,7 +111,7 @@ $colors: (
     line-height: 1.1;
     margin-bottom: 8px;
     font-weight: 400;
-    color: #000;
+    color: variables.$color-black;
     position: relative;
 
     &::after {
@@ -128,7 +123,7 @@ $colors: (
     font-family: 'Bavex', serif;
     font-size: 1.5em;
     font-weight: 400;
-    color: #666;
+    color: variables.$color-gray;
     margin-bottom: 24px;
   }
 }
@@ -142,7 +137,7 @@ $colors: (
   max-width: 400px;
   margin-left: 2em;
 
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(variables.$color-black, 0.1);
 }
 
 @include bp.respond-down(md) {
@@ -173,22 +168,22 @@ $colors: (
 }
 
 .chip-black {
-  color: #000 !important;
-  border: 1.25px solid #000 !important;
-  background: white !important;
+  color: variables.$color-black !important;
+  border: 1.25px solid variables.$color-black !important;
+  background: variables.$color-white !important;
   font-family: 'Bavex', serif !important;
   letter-spacing: 0.2px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(variables.$color-black, 0.08);
 
   .v-chip__content {
     font-family: 'Bavex', serif !important;
-    color: #000 !important;
+    color: variables.$color-black !important;
   }
 }
 
 .links-black {
   a {
-    color: #000 !important;
+    color: variables.$color-black !important;
     text-decoration: none;
 
     &:hover {

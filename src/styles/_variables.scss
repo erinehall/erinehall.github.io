@@ -8,8 +8,22 @@
   font-display: swap;
 }
 
-$accent-color: #5c4533;
-$accent-translucent: rgba(92, 69, 51, 0.25);
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray-dark: #1f1f1f;
+$color-gray: #666666;
+$color-gray-muted: #555555;
+$color-gray-light: #e1e1e1;
+$color-border: #eeeeee;
+$bubble-colors: (
+  #f5f5f5,
+  #dcdcdc,
+  #bfbfbf,
+  #a0a0a0
+);
+
+$accent-color: $color-black;
+$accent-translucent: rgba(0, 0, 0, 0.25);
 $font-family: "Bavex", Helvetica, Arial, sans-serif;
 $card-border-color: rgba(var(--v-theme-primary), 0.18);
 $card-radius: 14px;
@@ -20,5 +34,12 @@ $card-padding: 16px 24px;
 :root {
   --accent-color: #{$accent-color};
   --accent-translucent: #{$accent-translucent};
+  --color-black: #{$color-black};
+  --color-white: #{$color-white};
+  --color-gray-dark: #{$color-gray-dark};
+  --color-gray: #{$color-gray};
+  --color-gray-muted: #{$color-gray-muted};
+  --color-gray-light: #{$color-gray-light};
+  --color-border: #{$color-border};
   font-family: $font-family;
 }

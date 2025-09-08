@@ -3,7 +3,7 @@
 .nav-links {
   .v-btn {
     text-transform: none;
-    color: #1f1f1f;
+    color: variables.$color-gray-dark;
     transition: color 0.2s ease, opacity 0.2s ease;
 
     &:hover,

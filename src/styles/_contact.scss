@@ -8,12 +8,12 @@
   }
 
   .subtitle {
-    color: #555;
+    color: variables.$color-gray-muted;
     margin-bottom: 2rem;
   }
 }
 .confirmation-message {
-  color: #6e4c35;
+  color: variables.$accent-color;
   font-size: 0.95rem;
   font-style: italic;
   text-align: center;

@@ -1,6 +1,8 @@
+@use "./variables";
+
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: variables.$color-white;
 }
 
 .sticky-bar {
