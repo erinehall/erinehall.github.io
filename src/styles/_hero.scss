@@ -29,12 +29,16 @@ $colors: (
 
 .hero-wrapper {
   position: relative;
-  height: calc(100vh - var(--v-layout-top, 0px));
+  min-height: calc(100vh - var(--v-layout-top, 0px));
   overflow: hidden;
 
   background:
     linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #fff 100%),
     #fff;
+
+  @include bp.respond(md) {
+    height: calc(100vh - var(--v-layout-top, 0px));
+  }
 }
 
 .bubble-layer {
@@ -89,7 +93,7 @@ $colors: (
 }
 
 .hero-column {
-  height: 50%;
+  height: auto;
 
   @include bp.respond(md) {
     height: 100%;
@@ -100,7 +104,6 @@ $colors: (
   max-width: 500px;
   text-align: center;
   margin: 0 auto;
-  margin-right: 5em;
 
   .hero-skills,
   .hero-links {
@@ -135,10 +138,38 @@ $colors: (
   aspect-ratio: 1 / 1;
   object-fit: cover;
   width: 100%;
+  height: auto;
   max-width: 400px;
   margin-left: 2em;
 
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@include bp.respond-down(md) {
+  .text-block {
+    margin-top: 1rem;
+  }
+
+  .portrait {
+    margin-left: 0;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .text-block h1 {
+    font-size: 3.5em;
+  }
+}
+
+@include bp.respond-down(sm) {
+  .text-block h1 {
+    font-size: 3em;
+  }
+
+  .portrait {
+    max-width: 250px;
+    height: auto;
+  }
 }
 
 .chip-black {
