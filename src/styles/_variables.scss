@@ -1,8 +1,18 @@
 @font-face {
-  font-family: 'Bavex';
-  src: url('/fonts/Bavex.woff2') format('woff2'),
-       url('/fonts/Bavex.woff') format('woff'),
-       url('/fonts/Bavex.ttf') format('truetype');
+  font-family: 'Bavex Serif';
+  src: url('/fonts/BavexSerif.woff2') format('woff2'),
+       url('/fonts/BavexSerif.woff') format('woff'),
+       url('/fonts/BavexSerif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bavex Sans';
+  src: url('/fonts/BavexSans.woff2') format('woff2'),
+       url('/fonts/BavexSans.woff') format('woff'),
+       url('/fonts/BavexSans.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -24,7 +34,9 @@ $bubble-colors: (
 
 $accent-color: $color-black;
 $accent-translucent: rgba(0, 0, 0, 0.25);
-$font-family: "Bavex", Helvetica, Arial, sans-serif;
+$font-family-serif: 'Bavex Serif', serif;
+$font-family-sans: 'Bavex Sans', sans-serif;
+$font-family: $font-family-serif;
 $card-border-color: rgba(var(--v-theme-primary), 0.18);
 $card-radius: 14px;
 $card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -41,5 +53,6 @@ $card-padding: 16px 24px;
   --color-gray-muted: #{$color-gray-muted};
   --color-gray-light: #{$color-gray-light};
   --color-border: #{$color-border};
-  font-family: $font-family;
+  --v-font-family: #{$font-family-serif};
+  font-family: $font-family-serif;
 }

@@ -1,21 +1,5 @@
 @use "./variables";
 @use "./breakpoints" as bp;
-@font-face {
-  font-family: 'Bavex';
-  src: url('/fonts/Bavex.woff2') format('woff2'),
-       url('/fonts/Bavex.woff') format('woff'),
-       url('/fonts/Bavex.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  font-synthesis: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bavex', serif;
-  font-weight: 400;
-  margin: 0;
-}
 
 $animationDuration: 30;
 $amount: 12;
@@ -120,7 +104,7 @@ $colors: variables.$bubble-colors;
   }
 
   .subheading {
-    font-family: 'Bavex', serif;
+    font-family: variables.$font-family-serif;
     font-size: 1.5em;
     font-weight: 400;
     color: variables.$color-gray;
@@ -171,12 +155,10 @@ $colors: variables.$bubble-colors;
   color: variables.$color-black !important;
   border: 1.25px solid variables.$color-black !important;
   background: variables.$color-white !important;
-  font-family: 'Bavex', serif !important;
   letter-spacing: 0.2px;
   box-shadow: 0 2px 6px rgba(variables.$color-black, 0.08);
 
   .v-chip__content {
-    font-family: 'Bavex', serif !important;
     color: variables.$color-black !important;
   }
 }

@@ -53,6 +53,10 @@
   color: rgb(var(--v-theme-primary));
 }
 
+.role-title {
+  font-family: variables.$font-family-serif;
+}
+
 
 .role-badge {
   width: 28px;
