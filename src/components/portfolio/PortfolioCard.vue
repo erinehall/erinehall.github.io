@@ -1,11 +1,15 @@
 <template>
   <div>
-    <v-card class="portfolio-card app-card hover-shadow card-pad" elevation="0" @click="dialog = true">
+    <v-card
+      class="portfolio-card app-card hover-shadow card-pad text-center"
+      elevation="0"
+      @click="dialog = true"
+    >
       <v-img v-if="image" :src="image" height="160" cover class="mb-2" contain />
       <v-card-title class="mb-1">{{ title }}</v-card-title>
       <v-card-subtitle v-if="subtitle" class="pt-0 mb-2">{{ subtitle }}</v-card-subtitle>
       <v-card-text v-if="links?.length" class="pt-0">
-        <div class="d-flex flex-wrap ga-2 mt-2">
+        <div class="d-flex flex-wrap ga-2 mt-2 justify-center">
           <v-btn
             v-for="(link, i) in links"
             :key="i"
