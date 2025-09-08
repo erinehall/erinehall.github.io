@@ -1,18 +1,91 @@
 @use "./variables";
 @use "./breakpoints" as bp;
+@font-face {
+  font-family: 'Bavex';
+  src: url('/fonts/Bavex.woff2') format('woff2'),
+       url('/fonts/Bavex.woff') format('woff'),
+       url('/fonts/Bavex.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  font-synthesis: none;
+}
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bavex', serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+$animationDuration: 30;
+$amount: 12;
+
+$colors: (
+  #E3D5CA,
+  #B99B8A,
+  #e1e1e1,
+  #828c97
+);
 
 .hero-wrapper {
-  background:
-    linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #fff 100%),
-    url("../assets/wallpaper.png") no-repeat center center;
-  background-size: cover;
   position: relative;
   height: calc(100vh - var(--v-layout-top, 0px));
+  overflow: hidden;
+
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #fff 100%),
+    #fff;
+}
+
+.bubble-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+    animation-name: float;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    filter: blur(10px);
+  }
+
+  @for $i from 1 through $amount {
+    span:nth-child(#{$i}) {
+      $particleSize: (random(60) + 60) * 1vmin;
+      width: $particleSize;
+      height: $particleSize;
+
+      $color: nth($colors, random(length($colors)));
+      background: radial-gradient(
+        circle,
+        rgba($color, 0.9) 0%,
+        rgba($color, 0.4) 40%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      top: random(100) * 1%;
+      right: (random(50) + 50) * 1%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 120s;
+      animation-delay: random(($animationDuration + 60s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+    }
+  }
+}
+
+@keyframes float {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-20vh) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
 }
 
 .hero-content {
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-column {
@@ -25,57 +98,78 @@
 
 .text-block {
   max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-right: 5em;
 
-  @include bp.respond-down(md) {
-    text-align: center;
-
-    .hero-skills,
-    .hero-links {
-      justify-content: center;
-      padding-left: 0;
-    }
-
-    h1::after {
-      width: 100px;
-      margin-inline: auto;
-    }
+  .hero-skills,
+  .hero-links {
+    justify-content: center;
+    padding-left: 0;
   }
 
   h1 {
-    font-size: 3.2em;
+    font-size: 4.5em;
     line-height: 1.1;
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: 400;
+    color: #000;
     position: relative;
 
     &::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 4px;
-      margin-top: 8px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #4b2e2e, #d2b48c);
-      box-shadow: 0 0 6px rgba(79, 45, 25, 0.4);
+      content: none;
     }
   }
 
   .subheading {
+    font-family: 'Bavex', serif;
     font-size: 1.5em;
+    font-weight: 400;
+    color: #666;
     margin-bottom: 24px;
   }
 }
 
-
 .portrait {
+  border-radius: 50%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
+  margin-left: 2em;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Secondary hero reveal */
+.chip-black {
+  color: #000 !important;
+  border: 1.25px solid #000 !important;
+  background: white !important;
+  font-family: 'Bavex', serif !important;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  .v-chip__content {
+    font-family: 'Bavex', serif !important;
+    color: #000 !important;
+  }
+}
+
+.links-black {
+  a {
+    color: #000 !important;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .v-icon {
+    color: currentColor !important;
+  }
+}
+
 .hero-hidden {
   opacity: 1;
   transform: none;
@@ -86,7 +180,7 @@
     opacity: 0;
     transform: translateY(var(--motion-distance));
     transition: opacity var(--motion-duration-medium) var(--motion-ease-standard),
-      transform var(--motion-duration-medium) var(--motion-ease-standard);
+                transform var(--motion-duration-medium) var(--motion-ease-standard);
   }
 
   .hero-hidden.visible {
@@ -100,15 +194,16 @@
   bottom: 16px;
   left: 50%;
   animation: bounce 2s infinite;
+  z-index: 1;
 }
 
-  .scroll-arrow {
-    display: block;
-    margin: 0 auto;
-    font-size: 32px;
-    color: rgb(var(--v-theme-primary));
-    opacity: 0.5;
-  }
+.scroll-arrow {
+  display: block;
+  margin: 0 auto;
+  font-size: 32px;
+  color: rgb(var(--v-theme-primary));
+  opacity: 0.5;
+}
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

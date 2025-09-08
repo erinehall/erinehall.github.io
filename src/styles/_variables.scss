@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'Bavex';
+  src: url('/fonts/Bavex.woff2') format('woff2'),
+       url('/fonts/Bavex.woff') format('woff'),
+       url('/fonts/Bavex.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 $accent-color: #5c4533;
 $accent-translucent: rgba(92, 69, 51, 0.25);
-$font-family: "Inter", Helvetica, Arial, sans-serif;
+$font-family: "Bavex", Helvetica, Arial, sans-serif;
 $card-border-color: rgba(var(--v-theme-primary), 0.18);
 $card-radius: 14px;
 $card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
