@@ -73,9 +73,6 @@ const About: React.FC = () => {
                     <div className="w-full h-full flex flex-col items-center justify-center bg-stone-200 text-stone-500 p-6 text-center">
                       <div className="text-4xl mb-2">📷</div>
                       <p className="text-sm font-medium">Image not found</p>
-                      <p className="text-[10px] opacity-60 mt-1">
-                        Place {contactData.profileImage} in your public folder
-                      </p>
                     </div>
                   )}
                 </div>

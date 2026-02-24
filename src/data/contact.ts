@@ -4,5 +4,5 @@ export const contactData = {
   "linkedin": "https://linkedin.com/in/erinehall1",
   "github": "https://github.com/erinehall",
   "location": "Washington D.C. Metro Area",
-  "profileImage": "public/profile.jpg"
+  "profileImage": "/profile.jpg"
 };
