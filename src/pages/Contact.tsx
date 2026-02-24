@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
     <div className="pt-32 pb-24 bg-stone-50 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-24">
         <ScrollReveal className="text-center mb-16" baseDelay={100}>
-          <h1 className="text-5xl xl:text-6xl font-serif font-bold text-primary">Let's Connect</h1>
+          <h1 className="text-5xl xl:text-6xl font-serif font-bold text-primary">Let's Connect!</h1>
         </ScrollReveal>
 
         <div className="space-y-16">
